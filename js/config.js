@@ -53,7 +53,7 @@ const CONFIG = {
     // Configurações de cache
     CACHE: {
         ENABLED: true,
-        DURATION: 3000  // 3 segundos (menor que o intervalo de atualização)
+        DURATION: 300  // 3 segundos (menor que o intervalo de atualização)
     },
     
     // Configurações de desenvolvimento
