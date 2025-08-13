@@ -41,7 +41,7 @@ const CONFIG = {
         TIPO_EVENTO: 'tipoEvento'
     },
     
-    // Intervalo de atualização em milissegundos (5 segundos)
+    // Intervalo de atualização em milissegundos (55 segundos)
     UPDATE_INTERVAL: 55000,
     
     // Configurações de formatação
@@ -53,7 +53,7 @@ const CONFIG = {
     // Configurações de cache
     CACHE: {
         ENABLED: true,
-        DURATION: 1000  // 3 segundos (menor que o intervalo de atualização)
+        DURATION: 3000  // 3 segundos (menor que o intervalo de atualização)
     },
     
     // Configurações de desenvolvimento
