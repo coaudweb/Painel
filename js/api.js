@@ -31,11 +31,11 @@ class GoogleSheetsAPI {
             return MOCK_DATA.VIDEO;
         }
 
-        // Verificar cache
+        /* Verificar cache
         if (this.isCacheValid('video')) {
             if (CONFIG.DEV.DEBUG) console.log('Usando dados em cache para Vídeo');
             return this.cache.video.data;
-        }
+        }*/
 
         try {
             this.isLoading.video = true;
