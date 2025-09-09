@@ -38,8 +38,8 @@ class GoogleSheetsAPI {
         }*/
 
         try {
-            //this.isLoading.video = false;
-            //this.showLoading('video');
+            this.isLoading.video = false;
+            this.showLoading('video');
 
             // Construir URL da API
             const url = this.buildApiUrl(
