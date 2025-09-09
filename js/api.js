@@ -14,7 +14,7 @@ class GoogleSheetsAPI {
             }
         };
         this.isLoading = {
-            video: false,
+            video: true,
             audio: false
         };
         this.lastError = null;
@@ -31,14 +31,14 @@ class GoogleSheetsAPI {
             return MOCK_DATA.VIDEO;
         }
 
-         Verificar cache
+        // Verificar cache
         if (this.isCacheValid('video')) {
             if (CONFIG.DEV.DEBUG) console.log('Usando dados em cache para Vídeo');
-            return this.cache.video.data;
+           return this.cache.video.data;
         }
 
         try {
-            this.isLoading.video = false;
+            this.isLoading.video = true;
             this.showLoading('video');
 
             // Construir URL da API
