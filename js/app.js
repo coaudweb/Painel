@@ -342,7 +342,7 @@ class TabelasApp {
      * @param {string} tabId - ID da aba
      * @param {number} groupCounter - Contador do grupo
      * @param {number} index - Índice do item no grupo
-     */
+     
     addAlternatingCell(row, nomeEvento, observacao, tabId, groupCounter, index) {
         const cell = document.createElement('td');
         cell.classList.add('alternating-cell');
@@ -365,7 +365,28 @@ class TabelasApp {
         }
         
         row.appendChild(cell);
-    }
+    }*/
+
+    addAlternatingCell(row, nomeEvento, observacao, tabId, groupCounter, index) {
+  const cell = document.createElement('td');
+  cell.classList.add('alternating-cell');
+
+  const cellId = `${tabId}-alternating-${groupCounter}-${index}`;
+  cell.id = cellId;
+
+  if (!observacao || observacao.trim() === '') {
+    // Sem observação → mostra só o nome do evento (preto)
+    cell.textContent = nomeEvento || '';
+    cell.style.color = '#333333';
+  } else {
+    // Com observação → mostra só a observação (vermelho)
+    cell.textContent = observacao;
+    cell.style.color = '#9c0606ff';
+  }
+
+  row.appendChild(cell);
+}
+
     
     /**
      * Inicia a alternância de células que devem alternar
